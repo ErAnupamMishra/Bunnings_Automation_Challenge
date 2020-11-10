@@ -1,0 +1,18 @@
+{
+    "name": "calculator_home_loan_bdd_framework",
+    "version": "1.0.0",
+    "description": "Cucumber BDD framework for Home Loan Calculator with Puppeteer",
+    "main": "index.js",
+    "browser": "Chrome",
+    "author": "Anupam Mishra",
+    "license": "MIT",
+    "scripts": {
+        "test": "cucumber-js -f json:./reports/cucumber_report.json",
+        "posttest": "node reporterHTML.js"
+    },
+    "devDependencies": {
+        "cucumber": "^5.1.0",
+        "cucumber-html-reporter": "^5.2.0",
+        "puppeteer": "^5.4.1"
+    }
+}
