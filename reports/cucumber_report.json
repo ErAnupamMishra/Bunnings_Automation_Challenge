@@ -23,209 +23,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4000000
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "features\\step_definitions\\stepFunctions.js:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 10000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 12,
-            "name": "I want to launch \"home-loan-calculator\" URL",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 8493000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 14,
-            "name": "I verify the page title",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:15"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 46000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Application Type",
-                      "Number of dependants",
-                      "Property you would like to buy"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Single",
-                      "0",
-                      "Home to live in"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "When ",
-            "line": 16,
-            "name": "I enter person details in Your details column",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1116000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Your income (before tax)",
-                      "Your other income"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "80000",
-                      "10000"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "When ",
-            "line": 20,
-            "name": "I enter person earning details in Your earnings column",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1382000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Living expenses",
-                      "Current home loan repayments",
-                      "Other loan repayments",
-                      "Other commitments",
-                      "Total credit card limits"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "500",
-                      "0",
-                      "100",
-                      "0",
-                      "10000"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "When ",
-            "line": 24,
-            "name": "I enter person expense details in Your expenses column",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2332000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 28,
-            "name": "I click on \"Work out how much I could borrow\" button",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 360000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 30,
-            "name": "I validate borrowing estimate of \"$500,000\"",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:44"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3504000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "features\\step_definitions\\stepFunctions.js:23"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 322000000
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "keyword": "Feature",
-    "name": "TC02_StartOver_ClearFormScenario",
-    "line": 8,
-    "id": "tc02_startover_clearformscenario",
-    "tags": [],
-    "uri": "features\\TC02_StartOver_ClearFormScenario.feature",
-    "elements": [
-      {
-        "id": "tc02_startover_clearformscenario;clear-the-web-page-filled-form-and-enable-start-over-functionality",
-        "keyword": "Scenario",
-        "line": 10,
-        "name": "Clear the web page filled form and enable start over functionality",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "features\\step_definitions\\stepFunctions.js:15"
-            },
-            "result": {
-              "status": "passed"
+              "duration": 2000000
             }
           },
           {
@@ -248,7 +46,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6724000000
+              "duration": 7406000000
             }
           },
           {
@@ -293,7 +91,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 886000000
+              "duration": 1045000000
             }
           },
           {
@@ -323,7 +121,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1313000000
+              "duration": 1150000000
             }
           },
           {
@@ -359,7 +157,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1908000000
+              "duration": 1844000000
             }
           },
           {
@@ -372,7 +170,210 @@
             },
             "result": {
               "status": "passed",
-              "duration": 234000000
+              "duration": 260000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "I validate borrowing estimate of \"$500,000\"",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1244000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\stepFunctions.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 363000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "TC02_StartOver_ClearFormScenario",
+    "line": 8,
+    "id": "tc02_startover_clearformscenario",
+    "tags": [],
+    "uri": "features\\TC02_StartOver_ClearFormScenario.feature",
+    "elements": [
+      {
+        "id": "tc02_startover_clearformscenario;clear-the-web-page-filled-form-and-enable-start-over-functionality",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Clear the web page filled form and enable start over functionality",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\stepFunctions.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\stepFunctions.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I want to launch \"home-loan-calculator\" URL",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7412000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I verify the page title",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Application Type",
+                      "Number of dependants",
+                      "Property you would like to buy"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Single",
+                      "0",
+                      "Home to live in"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I enter person details in Your details column",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1048000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Your income (before tax)",
+                      "Your other income"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "80000",
+                      "10000"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I enter person earning details in Your earnings column",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1280000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Living expenses",
+                      "Current home loan repayments",
+                      "Other loan repayments",
+                      "Other commitments",
+                      "Total credit card limits"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "500",
+                      "0",
+                      "100",
+                      "0",
+                      "10000"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I enter person expense details in Your expenses column",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2095000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I click on \"Work out how much I could borrow\" button",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 306000000
             }
           },
           {
@@ -385,7 +386,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 233000000
+              "duration": 306000000
             }
           },
           {
@@ -415,7 +416,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 266000000
+              "duration": 276000000
             }
           },
           {
@@ -451,7 +452,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 552000000
+              "duration": 632000000
             }
           },
           {
@@ -462,7 +463,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 294000000
+              "duration": 289000000
             }
           }
         ]

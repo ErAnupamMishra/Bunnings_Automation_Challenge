@@ -12,17 +12,17 @@ const myurl = "https://www.anz.com.au/personal/home-loans/calculators-tools/much
 //Few variables
 var xpath = '';
 var actualValue = '';
-Before( (scenario) => {
+Before((scenario) => {
   this.scenarioName = scenario.pickle.name;
   console.log(this.scenarioName);
 });
-Before(function() { 
-  console.log("\n-----------------Test Scenario has started----------------------\n ");   
+Before(function () {
+  console.log("\n-----------------Test Scenario has started----------------------\n ");
 });
-  
-After(function() { 
+
+After(function () {
   console.log("\n-----------------Test Scenario has ended------------------------\n ");
-  return this.closeBrowser(); 
+  return this.closeBrowser();
 });
 /*
 //Local Testing xpath filters, can be deleted
@@ -55,30 +55,30 @@ const error_text = await page.$x('//span[@class="borrow__error__text"]');
 
 class stepFunctions {
 
-async openBrowser(){
-  try {
-    this.browser = await puppeteer.launch({headless: false,slowMo: 30, args: ['--start-maximized', '--window-size=1920,1080']});
-    this.page = await this.browser.newPage();    
-    await this.page.goto(myurl,{waitUntil: 'networkidle2'});    
-  }catch (e) {
-    console.error("Page not found");
-  }    
-}
-//Get page tile validated
-async getTitlePage(){
-  const pageTitle = await this.page.title();
-  console.log('\t HomePage Title =', pageTitle);  
-  assert.strictEqual(pageTitle, "Home loan borrowing power calculator | ANZ"); 
-  console.log('\t Home Page title validation successful \t \n \t Browser is open \t');
-}
+  async openBrowser() {
+    try {
+      this.browser = await puppeteer.launch({ headless: false, slowMo: 30, args: ['--start-maximized', '--window-size=1920,1080'] });
+      this.page = await this.browser.newPage();
+      await this.page.goto(myurl, { waitUntil: 'networkidle2' });
+    } catch (e) {
+      console.error("Page not found");
+    }
+  }
+  //Get page tile validated
+  async getTitlePage() {
+    const pageTitle = await this.page.title();
+    console.log('\t HomePage Title =', pageTitle);
+    assert.strictEqual(pageTitle, "Home loan borrowing power calculator | ANZ");
+    console.log('\t Home Page title validation successful \t \n \t Browser is open \t');
+  }
 
- // Filling Your details column
- async enterDetails(dataTable) {
+  // Filling Your details column
+  async enterDetails(dataTable) {
     try {
       // Fill Application type 
-   
-     if(dataTable.rows()[0][0] == "Single" ) xpath = '[for="application_type_single"]';
-     else if (dataTable.rows()[0][0] == "Joint" ) xpath = '[for="application_type_joint"]'; 
+
+      if (dataTable.rows()[0][0] == "Single") xpath = '[for="application_type_single"]';
+      else if (dataTable.rows()[0][0] == "Joint") xpath = '[for="application_type_joint"]';
       await this.page.waitForSelector(xpath);
       await this.page.click(xpath);
 
@@ -86,10 +86,10 @@ async getTitlePage(){
       await this.page.type('[title="Number of dependants"]', dataTable.rows()[0][1]);
 
       // Property you would like to buy -selection  
-    
-    if(dataTable.rows()[0][2] == "Home to live in" ) xpath = '[for="borrow_type_home"]';     
-      else if(dataTable.rows()[0][2] == "Residential investment" ) xpath = '[for="borrow_type_investment"]';      
-      await this.page.click(xpath);         
+
+      if (dataTable.rows()[0][2] == "Home to live in") xpath = '[for="borrow_type_home"]';
+      else if (dataTable.rows()[0][2] == "Residential investment") xpath = '[for="borrow_type_investment"]';
+      await this.page.click(xpath);
     } catch (e) {
       console.error(e);
     }
@@ -106,7 +106,7 @@ async getTitlePage(){
       console.error(e);
     }
   }
-  
+
   // Filling Your expenses column
   async enterExpenses(dataTable) {
     try {
@@ -119,86 +119,82 @@ async getTitlePage(){
       // Other commitments
       await this.page.type('[aria-labelledby="q3q4"]', dataTable.rows()[0][3]);
       // Total credit card limits
-      await this.page.type('[aria-labelledby="q3q5"]', dataTable.rows()[0][4]);     
+      await this.page.type('[aria-labelledby="q3q5"]', dataTable.rows()[0][4]);
     } catch (e) {
       console.error(e);
     }
   }
 
-   // Click on button (functionality for 'Work out how much I could borrow' or 'Start over')
-   async clickOnButton(string) {
-    
-    //console.log("Step before");
-    if (string == "Work out how much I could borrow" ) xpath = '#main-container > div:nth-child(1) > div > div > div.clearfix > div > div > div > div > div.container.container--four.box--white > div > div:nth-child(3) > div > div > div > div.borrow__calculate.text--center.clearfix > button';    
-    else if (string == "Start over") xpath = '[aria-label="Start over"]';    
+  // Click on button (functionality for 'Work out how much I could borrow' or 'Start over')
+  async clickOnButton(string) {
+    if (string == "Work out how much I could borrow") xpath = '[id="btnBorrowCalculater"]';
+    else if (string == "Start over") xpath = '[aria-label="Start over"]';
     // click
     await this.page.click(xpath);
-   }
+  }
 
- // Capturing estimate result
- async validateEstimate(string) {
-     //Filter xpath 
-    
-    await this.page.waitFor(3200);
-    await this.page.waitForSelector('[aria-label="Start over"]');
-     xpath = '#main-container > div:nth-child(1) > div > div > div.clearfix > div > div > div > div > div.container.container--four.box--white > div > div:nth-child(3) > div > div > div > div.borrow__result.text--white.clearfix > div.box--left > span.borrow__result__text > span';
-     const actualValue = await this.page.$eval(xpath, el => el.innerText);
+  // Capturing estimate result
+  async validateEstimate(string) {
+    //Filter xpath
+    await this.page.waitForSelector('[aria-live="assertive"]');
+    xpath = '[id="borrowResultTextAmount"]';
+    const actualValue = await this.page.$eval(xpath, el => el.innerText);
     console.log("\t Estimated amount: \t" + actualValue);
-    assert.strictEqual(string, actualValue);    
-    
+    assert.strictEqual(string, actualValue);
+
   }
   // Validate 'Your Earnings' column
-  async validateEarnings(dataTable){
+  async validateEarnings(dataTable) {
     try {
-        // Your income (before tax)
-        
-        //your_income
-        actualValue = getValueLocator(await (this.page.$eval('[aria-labelledby="q2q1"]', el => el.outerHTML)));
-        assert.equal(dataTable.rows()[0][0], actualValue);
-  
-        // Your other income
-        actualValue = getValueLocator(await (this.page.$eval('[aria-labelledby="q2q2"]', el => el.outerHTML)));        
-        assert.strictEqual(dataTable.rows()[0][1], actualValue);
-      } catch (e) {
-        console.error(e);
-      }
-}
-// Validate 'Your Expenses' column
-async validateExpenses(dataTable){
-    try {
-        
-        // Living expenses     
-        
-        actualValue = getValueLocator(await (this.page.$eval('[aria-labelledby="q3q1"]', el => el.outerHTML)));        
-        assert.strictEqual(dataTable.rows()[0][0], actualValue);
-        
-        // Current home loan repayments
-        actualValue = getValueLocator(await (this.page.$eval('[aria-labelledby="q3q2"]', el => el.outerHTML)));
-        assert.strictEqual(dataTable.rows()[0][1], actualValue);
-        
-        // Other loan repayments
-        actualValue = getValueLocator(await (this.page.$eval('[aria-labelledby="q3q3"]', el => el.outerHTML)));
-        assert.strictEqual(dataTable.rows()[0][2], actualValue);
-  
-        // Other commitments
-        actualValue = getValueLocator(await (this.page.$eval('[aria-labelledby="q3q4"]', el => el.outerHTML)));
-        assert.strictEqual(dataTable.rows()[0][3], actualValue);
-  
-        // Total credit card limits
-        actualValue = getValueLocator(await (this.page.$eval('[aria-labelledby="q3q5"]', el => el.outerHTML)));
-        assert.strictEqual(dataTable.rows()[0][4], actualValue);
-      } catch (e) {
-        console.error(e);
-      }
-}
+      // Your income (before tax)
 
-async closeBrowser() {
+      //your_income
+      actualValue = getValueLocator(await (this.page.$eval('[aria-labelledby="q2q1"]', el => el.outerHTML)));
+      assert.strictEqual(dataTable.rows()[0][0], actualValue);
+
+      // Your other income
+      actualValue = getValueLocator(await (this.page.$eval('[aria-labelledby="q2q2"]', el => el.outerHTML)));
+      assert.strictEqual(dataTable.rows()[0][1], actualValue);
+    } catch (e) {
+      console.error(e);
+    }
+  }
+  // Validate 'Your Expenses' column
+  async validateExpenses(dataTable) {
+    try {
+
+      // Living expenses     
+
+      actualValue = getValueLocator(await (this.page.$eval('[aria-labelledby="q3q1"]', el => el.outerHTML)));
+      assert.strictEqual(dataTable.rows()[0][0], actualValue);
+
+      // Current home loan repayments
+      actualValue = getValueLocator(await (this.page.$eval('[aria-labelledby="q3q2"]', el => el.outerHTML)));
+      assert.strictEqual(dataTable.rows()[0][1], actualValue);
+
+      // Other loan repayments
+      actualValue = getValueLocator(await (this.page.$eval('[aria-labelledby="q3q3"]', el => el.outerHTML)));
+      assert.strictEqual(dataTable.rows()[0][2], actualValue);
+
+      // Other commitments
+      actualValue = getValueLocator(await (this.page.$eval('[aria-labelledby="q3q4"]', el => el.outerHTML)));
+      assert.strictEqual(dataTable.rows()[0][3], actualValue);
+
+      // Total credit card limits
+      actualValue = getValueLocator(await (this.page.$eval('[aria-labelledby="q3q5"]', el => el.outerHTML)));
+      assert.strictEqual(dataTable.rows()[0][4], actualValue);
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async closeBrowser() {
     //closing the browser
     await this.browser.close();
   }
 }
 // Function to extract value
-function getValueLocator(Value) {  
-  return Value.slice(Value.lastIndexOf("value=")+7,Value.lastIndexOf("value=")+8);  
+function getValueLocator(Value) {
+  return Value.slice(Value.lastIndexOf("value=") + 7, Value.lastIndexOf("value=") + 8);
 }
-  setWorldConstructor(stepFunctions);
+setWorldConstructor(stepFunctions);
