@@ -1,4 +1,4 @@
-# BankingProjects -UI Test Automation
+# BunningsProjects -UI Test Automation
 # Project Description : Bunnings Website Search functionality. 
 # Author: anupam.mishra13@gmail.com
 # Version : 1.0
@@ -29,7 +29,7 @@ Run mode: Can be modifed in .\features\step_definitions\stepFunctions.js for eit
 
  # Jenkins Steps:
  1. Under Git Integration: pull source code from github:
-<code>git clone git@github.com:ErAnupamMishra/BankingProjects_UIAutomation.git </code>
+<code>git clone git@github.com:ErAnupamMishra/Bunnings-Automation-Challenge.git </code>
 2. Run commands: "<code>npm i</code>" and "<code>npm test</code>"
 
 
