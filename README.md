@@ -4,7 +4,14 @@
 # Version : 1.0
 # Status :Published
 # Summary : JavaScript Automation Framework in Cucumber (gherkin - BDD) with an open source UI test automation runtime-Puppeteer
+# This Repository has 3 parts:
+1. Test Strategy Document / Test Plan
+2. Test Cases Document
+3. Automation Script framework in JavaScript ( Selenium + Cucumber BDD framework ) with an open source UI test automation runtime-Puppeteer
+
+
 # To build automated tests covering various use cases to verify that Search functionality is working properly
+
  
 Output Results is in Json and html and it will be stored under ./reports folder.
 Browser supported: Chromium - default with Puppeteer
