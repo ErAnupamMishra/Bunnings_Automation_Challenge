@@ -1,5 +1,5 @@
 {
-    "name": "calculator_home_loan_bdd_framework",
+    "name": "bunnings_searchbox_bdd_framework",
     "version": "1.0.0",
     "description": "Cucumber BDD framework for Home Loan Calculator with Puppeteer",
     "main": "index.js",

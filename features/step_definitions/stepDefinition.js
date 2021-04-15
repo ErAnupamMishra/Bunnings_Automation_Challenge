@@ -1,4 +1,4 @@
-/** Scenarios/Step Definition file for Loan Borrow Calculator
+/** Scenarios/Step Definition file for Bunnings Search functionality
 #Author: anupam.mishra13@gmail.com
 #Version : 1.0 
 #Status :Published
@@ -19,40 +19,20 @@ Given('I verify the page title' , {timeout: constTime}, async function () {
 
 // WHEN BDD step
 
-When('I enter person details in Your details column', {timeout: constTime},  async function (dataTable) {
-  // Your details section
-  return await this.enterDetails(dataTable);
+When('I enter item details in Search bar column for {string}', {timeout: constTime},  async function (string) {
+  // Search bar section
+  await this.enterDetails(string);
+  
 });
 
-When('I enter person earning details in Your earnings column', {timeout: constTime}, async function (dataTable) {
-  //Your earning section
-  return await this.enterEarnings(dataTable);
-});
-
-When('I enter person expense details in Your expenses column', {timeout: constTime}, async function (dataTable) {
-  // Your expenses section
-  return await this.enterExpenses(dataTable);
-});
-
-When('I click on {string} button', {timeout: constTime}, async function (string) {
-  // click on button { 'Work out how much calculation' or 'Start over' }
-  return await this.clickOnButton(string);
+When('I click on Search button', {timeout: constTime},  async function () {
+  // click on button Search
+  return await this.clickOnButton();
 });
 
 // THEN BDD step
 
-Then('I validate borrowing estimate of {string}', {timeout: constTime}, async function (string) {
+Then('I validate search result page for {string}', {timeout: constTime}, async function (string) {
   // Validate borrowing estimate 
-  return await this.validateEstimate(string);
+  return await this.validateResult(string);
 });
-
-Then('I validate Your earnings column', {timeout: constTime}, async function (dataTable) {
-  // Validates values in 'Your earning' fields
-  return await this.validateEarnings(dataTable);
-});
-
-Then('I validate Your expenses column',{ timeout: constTime}, async function (dataTable) {
-  // Validate values in 'Your expenses' fields
-  return await this.validateExpenses(dataTable);
-});
-

@@ -1,10 +1,10 @@
 # BankingProjects -UI Test Automation
-# Project Description : Home Loan Calculator for individual. 
+# Project Description : Bunnings Website Search functionality. 
 # Author: anupam.mishra13@gmail.com
 # Version : 1.0
 # Status :Published
 # Summary : JavaScript Automation Framework in Cucumber (gherkin - BDD) with an open source UI test automation runtime-Puppeteer
-# To build automated tests covering various use cases to verify that Loan calculator is working properly
+# To build automated tests covering various use cases to verify that Search functionality is working properly
  
 Output Results is in Json and html and it will be stored under ./reports folder.
 Browser supported: Chromium - default with Puppeteer

@@ -1,17 +1,17 @@
 [
   {
     "keyword": "Feature",
-    "name": "TC01_PersonBorrowingEstimate",
+    "name": "Positive Scenarios for Bunnings Search functionality",
     "line": 8,
-    "id": "tc01_personborrowingestimate",
+    "id": "positive-scenarios-for-bunnings-search-functionality",
     "tags": [],
-    "uri": "features\\TC01_PersonBorrowingEstimate.feature",
+    "uri": "features\\TC_ValidSearchScenarios.feature",
     "elements": [
       {
-        "id": "tc01_personborrowingestimate;open-home-loan-calculator-url,-enter-person-details-and-get-borrowing-estimate",
+        "id": "positive-scenarios-for-bunnings-search-functionality;open-bunnings-website-url,-enter-product-details-for-different-positive-scenarios",
         "keyword": "Scenario",
-        "line": 10,
-        "name": "Open Home Loan calculator URL, Enter person details and get borrowing estimate",
+        "line": 23,
+        "name": "Open Bunnings Website URL, Enter product details for different positive scenarios",
         "tags": [],
         "type": "scenario",
         "steps": [
@@ -19,7 +19,7 @@
             "keyword": "Before",
             "hidden": true,
             "match": {
-              "location": "features\\step_definitions\\stepFunctions.js:15"
+              "location": "features\\step_definitions\\stepFunctions.js:16"
             },
             "result": {
               "status": "passed",
@@ -30,226 +30,24 @@
             "keyword": "Before",
             "hidden": true,
             "match": {
-              "location": "features\\step_definitions\\stepFunctions.js:19"
+              "location": "features\\step_definitions\\stepFunctions.js:20"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 6000000
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 12,
-            "name": "I want to launch \"home-loan-calculator\" URL",
+            "name": "I want to launch \"Bunnings Website\" URL",
             "match": {
               "location": "features\\step_definitions\\stepDefinition.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 7406000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 14,
-            "name": "I verify the page title",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:15"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 45000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Application Type",
-                      "Number of dependants",
-                      "Property you would like to buy"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Single",
-                      "0",
-                      "Home to live in"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "When ",
-            "line": 16,
-            "name": "I enter person details in Your details column",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1045000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Your income (before tax)",
-                      "Your other income"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "80000",
-                      "10000"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "When ",
-            "line": 20,
-            "name": "I enter person earning details in Your earnings column",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1150000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Living expenses",
-                      "Current home loan repayments",
-                      "Other loan repayments",
-                      "Other commitments",
-                      "Total credit card limits"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "500",
-                      "0",
-                      "100",
-                      "0",
-                      "10000"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "When ",
-            "line": 24,
-            "name": "I enter person expense details in Your expenses column",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1844000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 28,
-            "name": "I click on \"Work out how much I could borrow\" button",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 260000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 30,
-            "name": "I validate borrowing estimate of \"$500,000\"",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:44"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1244000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "features\\step_definitions\\stepFunctions.js:23"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 363000000
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "keyword": "Feature",
-    "name": "TC02_StartOver_ClearFormScenario",
-    "line": 8,
-    "id": "tc02_startover_clearformscenario",
-    "tags": [],
-    "uri": "features\\TC02_StartOver_ClearFormScenario.feature",
-    "elements": [
-      {
-        "id": "tc02_startover_clearformscenario;clear-the-web-page-filled-form-and-enable-start-over-functionality",
-        "keyword": "Scenario",
-        "line": 10,
-        "name": "Clear the web page filled form and enable start over functionality",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "features\\step_definitions\\stepFunctions.js:15"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1000000
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "features\\step_definitions\\stepFunctions.js:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 12,
-            "name": "I want to launch \"home-loan-calculator\" URL",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 7412000000
+              "duration": 11459000000
             }
           },
           {
@@ -266,204 +64,268 @@
             }
           },
           {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Application Type",
-                      "Number of dependants",
-                      "Property you would like to buy"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Single",
-                      "0",
-                      "Home to live in"
-                    ]
-                  }
-                ]
-              }
-            ],
+            "arguments": [],
             "keyword": "When ",
             "line": 16,
-            "name": "I enter person details in Your details column",
+            "name": "I enter item details in Search bar column for \"Mirrors\"",
             "match": {
               "location": "features\\step_definitions\\stepDefinition.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1048000000
+              "duration": 891000000
             }
           },
           {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Your income (before tax)",
-                      "Your other income"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "80000",
-                      "10000"
-                    ]
-                  }
-                ]
-              }
-            ],
+            "arguments": [],
             "keyword": "When ",
+            "line": 18,
+            "name": "I click on Search button",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1187000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
             "line": 20,
-            "name": "I enter person earning details in Your earnings column",
+            "name": "I validate search result page for \"6734\"",
             "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:27"
+              "location": "features\\step_definitions\\stepDefinition.js:35"
             },
             "result": {
               "status": "passed",
-              "duration": 1280000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Living expenses",
-                      "Current home loan repayments",
-                      "Other loan repayments",
-                      "Other commitments",
-                      "Total credit card limits"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "500",
-                      "0",
-                      "100",
-                      "0",
-                      "10000"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "When ",
-            "line": 24,
-            "name": "I enter person expense details in Your expenses column",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2095000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 28,
-            "name": "I click on \"Work out how much I could borrow\" button",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 306000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 30,
-            "name": "I click on \"Start over\" button",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 306000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Your income (before tax)",
-                      "Your other income"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "0",
-                      "0"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "Then ",
-            "line": 32,
-            "name": "I validate Your earnings column",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:49"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 276000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Living expenses",
-                      "Current home loan repayments",
-                      "Other loan repayments",
-                      "Other commitments",
-                      "Total credit card limits"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "0",
-                      "0",
-                      "0",
-                      "0",
-                      "0"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "Then ",
-            "line": 36,
-            "name": "I validate Your expenses column",
-            "match": {
-              "location": "features\\step_definitions\\stepDefinition.js:54"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 632000000
+              "duration": 2093000000
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "match": {
-              "location": "features\\step_definitions\\stepFunctions.js:23"
+              "location": "features\\step_definitions\\stepFunctions.js:24"
             },
             "result": {
               "status": "passed",
-              "duration": 289000000
+              "duration": 423000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "positive-scenarios-for-bunnings-search-functionality;open-bunnings-website-url,-enter-product-details-for-different-positive-scenarios",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Open Bunnings Website URL, Enter product details for different positive scenarios",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\stepFunctions.js:16"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\stepFunctions.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I want to launch \"Bunnings Website\" URL",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19834000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I verify the page title",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I enter item details in Search bar column for \"Living Elements 1200 x 350 x 5mm Flat Edge Mirror\"",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4808000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I click on Search button",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1775000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I validate search result page for \"1\"",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1532000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\stepFunctions.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 325000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "positive-scenarios-for-bunnings-search-functionality;open-bunnings-website-url,-enter-product-details-for-different-positive-scenarios",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Open Bunnings Website URL, Enter product details for different positive scenarios",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\stepFunctions.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\stepFunctions.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I want to launch \"Bunnings Website\" URL",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15147000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I verify the page title",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I enter item details in Search bar column for \"%\"",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 357000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I click on Search button",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1096000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I validate search result page for \"0\"",
+            "match": {
+              "location": "features\\step_definitions\\stepDefinition.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1647000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\stepFunctions.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 332000000
             }
           }
         ]
